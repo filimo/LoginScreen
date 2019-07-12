@@ -1,2 +1,3 @@
 # LoginScreen
-Login screen on SwiftUI
+
+This example is how to use @Published @State @ObjectBinding together.
