@@ -9,20 +9,21 @@
 import SwiftUI
 import Combine
 
-class UserModelView: BindableObject {
+
+class UserViewModels: BindableObject {
     @Published var password = ""
     @Published var passwordRepeat = ""
     
-    var didChange = PassthroughSubject<Void, Never>()
+    var willChange = PassthroughSubject<Void, Never>()
     
-    @Published var isValid = false {
+    var isValid = false {
         didSet {
-            didChange.send()
+            willChange.send()
         }
     }
     
     var validPassword: AnyPublisher<Bool, Never> {
-        return Publishers.CombineLatest($password, $passwordRepeat)
+        Publishers.CombineLatest($password, $passwordRepeat)
             .map { password, passwordRepeat in
                 return !password.isEmpty && password == passwordRepeat
             }
@@ -33,10 +34,6 @@ class UserModelView: BindableObject {
         _ = validPassword
             .receive(on: RunLoop.main)
             .assign(to: \.isValid, on: self)
-//            .map { val in
-//                return val
-//            }
-//            .assign(to: \.isValid, on: self)
     }
 }
 

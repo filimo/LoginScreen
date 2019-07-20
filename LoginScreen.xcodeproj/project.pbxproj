@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0BE6F3122DC7944006F6BDE /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE6F3022DC7944006F6BDE /* FlipView.swift */; };
+		F0BE6F3322DC9596006F6BDE /* TestFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE6F3222DC9596006F6BDE /* TestFlipView.swift */; };
 		F0CFD15A22D86588005BF9A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFD15922D86588005BF9A1 /* AppDelegate.swift */; };
 		F0CFD15C22D86588005BF9A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFD15B22D86588005BF9A1 /* SceneDelegate.swift */; };
 		F0CFD15E22D86588005BF9A1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFD15D22D86588005BF9A1 /* MainView.swift */; };
@@ -15,7 +17,7 @@
 		F0CFD16622D8658B005BF9A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CFD16422D8658B005BF9A1 /* LaunchScreen.storyboard */; };
 		F0CFD17122D8658B005BF9A1 /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFD17022D8658B005BF9A1 /* LoginScreenTests.swift */; };
 		F0CFD17C22D8658B005BF9A1 /* LoginScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFD17B22D8658B005BF9A1 /* LoginScreenUITests.swift */; };
-		F0CFD18B22D86921005BF9A1 /* UserModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFD18A22D86921005BF9A1 /* UserModelView.swift */; };
+		F0CFD18B22D86921005BF9A1 /* UserViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFD18A22D86921005BF9A1 /* UserViewModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0BE6F3022DC7944006F6BDE /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		F0BE6F3222DC9596006F6BDE /* TestFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlipView.swift; sourceTree = "<group>"; };
 		F0CFD15622D86588005BF9A1 /* LoginScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CFD15922D86588005BF9A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0CFD15B22D86588005BF9A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +54,7 @@
 		F0CFD17722D8658B005BF9A1 /* LoginScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CFD17B22D8658B005BF9A1 /* LoginScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenUITests.swift; sourceTree = "<group>"; };
 		F0CFD17D22D8658B005BF9A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0CFD18A22D86921005BF9A1 /* UserModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelView.swift; sourceTree = "<group>"; };
+		F0CFD18A22D86921005BF9A1 /* UserViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F06C649922DC78C200BFB9E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFD15D22D86588005BF9A1 /* MainView.swift */,
+				F0BE6F3022DC7944006F6BDE /* FlipView.swift */,
+				F0BE6F3222DC9596006F6BDE /* TestFlipView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F06C649A22DC78CC00BFB9E9 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFD15922D86588005BF9A1 /* AppDelegate.swift */,
+				F0CFD15B22D86588005BF9A1 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		F0CFD14D22D86588005BF9A1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +124,9 @@
 		F0CFD15822D86588005BF9A1 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F0CFD18922D86908005BF9A1 /* ModelViews */,
-				F0CFD15922D86588005BF9A1 /* AppDelegate.swift */,
-				F0CFD15B22D86588005BF9A1 /* SceneDelegate.swift */,
-				F0CFD15D22D86588005BF9A1 /* MainView.swift */,
+				F0CFD18922D86908005BF9A1 /* ViewModels */,
+				F06C649A22DC78CC00BFB9E9 /* Delegates */,
+				F06C649922DC78C200BFB9E9 /* Views */,
 				F0CFD15F22D8658B005BF9A1 /* Assets.xcassets */,
 				F0CFD16422D8658B005BF9A1 /* LaunchScreen.storyboard */,
 				F0CFD16722D8658B005BF9A1 /* Info.plist */,
@@ -139,12 +161,12 @@
 			path = LoginScreenUITests;
 			sourceTree = "<group>";
 		};
-		F0CFD18922D86908005BF9A1 /* ModelViews */ = {
+		F0CFD18922D86908005BF9A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				F0CFD18A22D86921005BF9A1 /* UserModelView.swift */,
+				F0CFD18A22D86921005BF9A1 /* UserViewModels.swift */,
 			);
-			path = ModelViews;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,8 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0BE6F3122DC7944006F6BDE /* FlipView.swift in Sources */,
 				F0CFD15A22D86588005BF9A1 /* AppDelegate.swift in Sources */,
-				F0CFD18B22D86921005BF9A1 /* UserModelView.swift in Sources */,
+				F0CFD18B22D86921005BF9A1 /* UserViewModels.swift in Sources */,
+				F0BE6F3322DC9596006F6BDE /* TestFlipView.swift in Sources */,
 				F0CFD15C22D86588005BF9A1 /* SceneDelegate.swift in Sources */,
 				F0CFD15E22D86588005BF9A1 /* MainView.swift in Sources */,
 			);

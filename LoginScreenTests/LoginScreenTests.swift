@@ -11,7 +11,7 @@ import SwiftUI
 @testable import LoginScreen
 
 class LoginScreenTests: XCTestCase {
-    @ObjectBinding var user = UserModelView()
+    @ObjectBinding var user = UserViewModels()
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -30,13 +30,13 @@ class LoginScreenTests: XCTestCase {
         user.password = "111"
         user.passwordRepeat = "111"
         
-        sleep(1)
-        user.$isValid
-        .debounce(for: 1, scheduler: RunLoop.main)
-        .sink { val in
-            print(val)
-            if self.user.password == "111" { XCTAssert(val) }
-        }
+//        sleep(1)
+//        user.$isValid
+//        .debounce(for: 1, scheduler: RunLoop.main)
+//        .sink { val in
+//            print(val)
+//            if self.user.password == "111" { XCTAssert(val) }
+//        }
         
 //        sleep(2)
 //        print(user.isValid)
